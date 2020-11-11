@@ -133,10 +133,29 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">個人 << <a href='個人.html'>Previous</a> <a href='教學影片.html'>Next</a> >> 教學影片<br /><h1>團隊</h1>
-<p><img alt="" height="621" src="./../images/1.png" width="792"/></p>
-<p><img alt="" height="832" src="./../images/2.png" width="862"/></p>
-<br />個人 << <a href='個人.html'>Previous</a> <a href='教學影片.html'>Next</a> >> 教學影片</div>
+    <div id="tipue_search_content">bug << <a href='bug.html'>Previous</a> <a href='Develop.html'>Next</a> >> Develop<br /><h1>cmsimde錯誤</h1>
+<p>github 送上去的資料沒有綠勾，cmsimde開不起來，要刪除cmsimde重新安裝。</p>
+<ol>
+<li>Delete the relevant section from the<span> </span><code>.gitmodules</code><span> </span>file.</li>
+<li>Stage the<span> </span><code>.gitmodules</code><span> </span>changes:<br/><code>git add .gitmodules</code></li>
+<li>Delete the relevant section from<span> </span><code>.git/config</code>.</li>
+<li>Remove the submodule files from the working tree and index:<br/><code>git rm --cached path_to_submodule</code><span> </span>(no trailing slash).</li>
+<li>Remove the submodule's<span> </span><code>.git</code><span> </span>directory:<br/><code>rm -rf .git/modules/path_to_submodule</code></li>
+<li>Commit the changes:<br/><code>git commit -m "Removed submodule &lt;name&gt;"</code></li>
+<li>Delete the now untracked submodule files:<br/><code>rm -rf path_to_submodule</code></li>
+</ol>
+<p>步驟</p>
+<p>1.把cp2020的<code>.gitmodules</code> 刪掉</p>
+<p>2.打<span>git add .gitmodules指令</span></p>
+<p><span>3.打git rm --cached cmsimde</span></p>
+<p><span>4.打rm -rf .git/modules/path_to_submodule #無法用rm，直接進到cp2020/.git檔/modules/刪掉cmsimde資料夾</span></p>
+<p><span>5.打git commit -m "cmsimde"</span></p>
+<p><span>6.打rm -rf path_to_submodule #無法用rm，直接進到cp2020刪掉cmsimde資料夾</span></p>
+<p>7.git submodule add<span> </span><a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a></p>
+<p>8.git add .</p>
+<p>9.git commit -m "name"</p>
+<p>10.git push</p>
+<br />bug << <a href='bug.html'>Previous</a> <a href='Develop.html'>Next</a> >> Develop</div>
         
     <!-- footer -->
       <div class="container">
